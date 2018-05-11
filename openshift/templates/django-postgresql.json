@@ -335,7 +335,11 @@
             "volumes": [
               {
                 "name": "data",
-                "emptyDir": {}
+                "persistentVolumeClaim": [
+                  {
+                    "claimName": "django-postgresql-pv-claim"
+                  }
+                 ],                    
               }
             ],
             "containers": [
